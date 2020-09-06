@@ -11,36 +11,35 @@ $font-bold: 700;
 
 /*===== Colores =====*/
 
-    $first-color: #A29596;
-    $primary: #A29596;
-    $second-color: #33303D;
-    $black-color: #111111;
-    $white-color: #FFF;
+$first-color: #A29596;
+$primary: #A29596;
+$second-color: #33303D;
+$black-color: #111111;
+$white-color: #FFF;
 
 
 /*===== Police et typographie =====*/
 
-    $body-font: 'Roboto', sans-serif;
+$body-font: 'Roboto', sans-serif;
+$biggest-font-size: 1.5rem;
+$big-font-size: 1.5rem;
+$normal-font-size: 0.938rem;
+$smaller-font-size: 0.75rem;
 
-    $biggest-font-size: 1.5rem;
-    $big-font-size: 1.5rem;
-    $normal-font-size: 0.938rem;
-    $smaller-font-size: 0.75rem;
-
-    @media screen and (min-width: 968px){
-        $biggest-font-size: 3.25rem;
-        $big-font-size: 2.25rem;
-        $normal-font-size: 1rem;
-        $smaller-font-size: 0.813rem;
-    }
+@media screen and (min-width: 968px){
+  $biggest-font-size: 3.25rem;
+  $big-font-size: 2.25rem;
+  $normal-font-size: 1rem;
+  $smaller-font-size: 0.813rem;
+}
 
 /*===== z index =====*/
 
-    $z-back: -10;
-    $z-normal: 1;
-    $z-tooltip: 10;
-    $z-fixed: 100;
-    $z-modal: 1000;
+  $z-back: -10;
+  $z-normal: 1;
+  $z-tooltip: 10;
+  $z-fixed: 100;
+  $z-modal: 1000;
 
 
 /*===== BASE =====*/
@@ -65,9 +64,70 @@ a{
     text-decoration: none;
 }
 
-/*=====  LAYOUT =====*/
+/*=====  HEADER =====*/
 
-/*===== PAGES =====*/
+.l-header {
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-fixed;
+  background-color: $white-color;
+
+  .bg-grid {
+    max-width: 1200px;
+    margin: 0rem 1rem;
+  }
+  
+  /*===== PAGES =====*/
+    .nav {
+      height: $header-height;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      .nav__toggle {
+        cursor: pointer;
+      }
+
+      &__menu {
+        @media screen and (max-width: 968px) {
+          position: fixed;
+          left: -100%;
+          top: $header-height;
+          background-color: $white-color;
+          width: 80%;
+          height: 100%;
+          padding: 2rem;
+          z-index: $z-fixed;
+          transition: .3s;
+        }
+
+        .nav__list {
+
+
+          .nav__item {
+            margin-bottom: 2rem;
+            font-weight: $font-bold;
+
+            .nav__link {
+              color: $black-color;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+
+      .show {
+        left: 0;
+      }
+    }
+}
+
+
+
 
 
 /*Afficher menu*/

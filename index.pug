@@ -7,3 +7,24 @@ html(lang="en")
 
     link(rel="stylesheet", href="assets/css/index.css")
   body
+
+    // HEADER
+    header.l-header
+      nav.nav.bg-grid
+        .nav__toggle#nav-toggle
+          img(src="assets/icons/icon-menu.svg", alt="")
+      
+        div
+          a.nav__logo(href="#")
+            img(src="assets/icons/nike-logo.svg", alt="")
+        
+        .nav__menu#nav-menu
+          ul.nav__list
+            each val, index in ['men', 'women', 'kids', 'customize', 'sale']
+              li.nav__item
+                a.nav__link(href="#")= val
+        .nav__shop
+          img(src="assets/icons/shopping-bag.svg", alt="")
+
+    // MAIN JS
+    script(src="assets/js/index.js")

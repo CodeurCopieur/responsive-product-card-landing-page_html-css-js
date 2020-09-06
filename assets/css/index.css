@@ -27,8 +27,53 @@ ul {
 a {
   text-decoration: none; }
 
-/*=====  LAYOUT =====*/
-/*===== PAGES =====*/
+/*=====  HEADER =====*/
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #FFF;
+  /*===== PAGES =====*/ }
+  .l-header .bg-grid {
+    max-width: 1200px;
+    margin: 0rem 1rem; }
+  .l-header .nav {
+    height: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .l-header .nav .nav__toggle {
+      cursor: pointer; }
+    @media screen and (max-width: 968px) {
+      .l-header .nav__menu {
+        position: fixed;
+        left: -100%;
+        top: 3rem;
+        background-color: #FFF;
+        width: 80%;
+        height: 100%;
+        padding: 2rem;
+        z-index: 100;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; } }
+    .l-header .nav__menu .nav__list .nav__item {
+      margin-bottom: 2rem;
+      font-weight: 700; }
+      .l-header .nav__menu .nav__list .nav__item .nav__link {
+        color: #111111;
+        text-transform: uppercase; }
+    .l-header .nav .show {
+      left: 0; }
+
 /*Afficher menu*/
 /*===== MEDIA QUERIES =====*/
 html {
