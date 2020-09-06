@@ -35,10 +35,14 @@ a {
   left: 0;
   z-index: 100;
   background-color: #FFF;
-  /*===== PAGES =====*/ }
+  /*===== NAV =====*/ }
   .l-header .bg-grid {
     max-width: 1200px;
     margin: 0rem 1rem; }
+    @media screen and (min-width: 1200px) {
+      .l-header .bg-grid {
+        margin-left: auto;
+        margin-right: auto; } }
   .l-header .nav {
     height: 3rem;
     display: -webkit-box;
@@ -49,7 +53,8 @@ a {
     justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    /*Afficher menu*/ }
     .l-header .nav .nav__toggle {
       cursor: pointer; }
     @media screen and (max-width: 968px) {
@@ -74,14 +79,59 @@ a {
     .l-header .nav .show {
       left: 0; }
 
-/*Afficher menu*/
+/*=====  MAIN =====*/
+.home {
+  height: calc(100vh - 3rem);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1.5fr;
+  grid-template-rows: 1fr 1.5fr;
+  grid-template-areas: 'sneaker';
+  overflow: hidden; }
+  .home .sneaker {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: sneaker;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative; }
+    .home .sneaker .sneaker__figure {
+      width: 240px;
+      height: 240px;
+      background: #A29596;
+      border-radius: 50%;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+    .home .sneaker div .sneaker__img {
+      width: 313px;
+      position: absolute;
+      top: 16%;
+      left: 9%;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      transform: rotate(30deg);
+      opacity: 0;
+      -webkit-filter: drop-shadow(0 10px 10px rgba(17, 17, 17, 0.4));
+      filter: drop-shadow(0 10px 10px rgba(17, 17, 17, 0.4)); }
+      .home .sneaker div .sneaker__img.shows {
+        opacity: 1; }
+
 /*===== MEDIA QUERIES =====*/
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%; }
-
-body {
-  margin: 0; }
 
 main {
   display: block; }
