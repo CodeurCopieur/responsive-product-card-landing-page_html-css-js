@@ -27,6 +27,14 @@ ul {
 a {
   text-decoration: none; }
 
+.bg-grid {
+  max-width: 1200px;
+  margin: 0rem 1rem; }
+  @media screen and (min-width: 1200px) {
+    .bg-grid {
+      margin-left: auto;
+      margin-right: auto; } }
+
 /*=====  HEADER =====*/
 .l-header {
   width: 100%;
@@ -36,13 +44,6 @@ a {
   z-index: 100;
   background-color: #FFF;
   /*===== NAV =====*/ }
-  .l-header .bg-grid {
-    max-width: 1200px;
-    margin: 0rem 1rem; }
-    @media screen and (min-width: 1200px) {
-      .l-header .bg-grid {
-        margin-left: auto;
-        margin-right: auto; } }
   .l-header .nav {
     height: 3rem;
     display: -webkit-box;
@@ -87,7 +88,9 @@ a {
   -ms-grid-rows: 1fr 1.5fr;
   grid-template-rows: 1fr 1.5fr;
   grid-template-areas: 'sneaker';
-  overflow: hidden; }
+  overflow: hidden;
+  /* Sneaker */
+  /* Info */ }
   .home .sneaker {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -127,6 +130,115 @@ a {
       filter: drop-shadow(0 10px 10px rgba(17, 17, 17, 0.4)); }
       .home .sneaker div .sneaker__img.shows {
         opacity: 1; }
+    .home .sneaker .sneaker__colors {
+      position: absolute;
+      right: 2%; }
+      .home .sneaker .sneaker__colors .sneaker__color {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-bottom: .5rem;
+        cursor: pointer; }
+        .home .sneaker .sneaker__colors .sneaker__color.active {
+          border: 2px solid #FFF;
+          -webkit-box-shadow: 0 0 2px black;
+          box-shadow: 0 0 2px black; }
+      .home .sneaker .sneaker__colors .sneaker__color-one {
+        background-color: #A29596; }
+      .home .sneaker .sneaker__colors .sneaker__color-two {
+        background-color: #111111; }
+  .home .info {
+    /* Actions */ }
+    .home .info .data {
+      margin-bottom: 1.5rem; }
+      .home .info .data .data__subtitle {
+        font-size: 0.938rem; }
+      .home .info .data .data__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: .5rem; }
+      .home .info .data .data__text {
+        font-size: 0.938rem; }
+    .home .info .actions {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      /* Size */
+      /* Amount */
+      /* Price */ }
+      .home .info .actions .size .size__title {
+        font-size: 0.938rem;
+        font-weight: 700;
+        margin-bottom: 1rem; }
+      .home .info .actions .size .size__content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .home .info .actions .size .size__content .size__tallas {
+          width: 30px;
+          height: 30px;
+          font-size: 0.75rem;
+          text-align: center;
+          line-height: 30px;
+          border-radius: .25rem;
+          cursor: pointer; }
+          .home .info .actions .size .size__content .size__tallas:not(:nth-child(3)) {
+            margin-right: .5rem; }
+          .home .info .actions .size .size__content .size__tallas.active {
+            background-color: #A29596;
+            color: #FFF; }
+      .home .info .actions .amount .amount__title {
+        font-size: 0.938rem;
+        font-weight: 700;
+        margin-bottom: 1rem; }
+      .home .info .actions .amount .amount__content {
+        width: 100px;
+        height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: #A29596;
+        color: #FFF;
+        padding: .5rem;
+        border-radius: .25rem; }
+      .home .info .actions .price {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 83px;
+        background-color: #FFF;
+        border-radius: 1.5rem 1.5rem 0 0;
+        -webkit-box-shadow: 0 0 20px rgba(17, 17, 17, 0.25);
+        box-shadow: 0 0 20px rgba(17, 17, 17, 0.25);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .home .info .actions .price .price__title {
+          color: #111111;
+          font-size: 1.5rem; }
+        .home .info .actions .price .price__btn {
+          background-color: #A29596;
+          color: #FFF;
+          padding: 1.25rem 3.125rem; }
 
 /*===== MEDIA QUERIES =====*/
 html {

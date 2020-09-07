@@ -29,12 +29,44 @@ html(lang="en")
     // MAIN
     main.l-main.bg-grid
       .home
+        // SNEAKER
         .sneaker
           .sneaker__figure
 
           div
             img.sneaker__img.shows(src="assets/img/NikeAirMaxMotion2.png", color="#A29596", alt="")
             img.sneaker__img(src="assets/img/NikeAirMax Motion2black.png",color="#111111", alt="")
+          .sneaker__colors
+            .sneaker__color.sneaker__color-one.active(primary="#A29596", color="#A29596")
+            .sneaker__color.sneaker__color-two(primary="#111111", color="#111111")
+        // INFO
+        .info
+          .data
+            span.data__subtitle Nike
+            h1.data__title Air Motion 2
+            p.data__text Lorem, ipsum dolor sit amet consectetur<br> adipisicing elit. Magnam, blanditiis.
+
+          // ACTIONS
+          .actions
+            // SIZE
+            .size
+              h3.size__title Tallas 
+              .size__content 
+                span.size__tallas.active 8.5
+                span.size__tallas 9
+                span.size__tallas 9.5
+            // AMOUNT
+            .amount
+              h3.amount__title Amount.
+              .amount__content
+                span -
+                span 1
+                span +
+            
+            // PRICE
+            .price
+              span.price__title 99.00€
+              a.price__btn(href="") add to card
     
 
     // MAIN JS
